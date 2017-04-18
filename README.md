@@ -1,11 +1,9 @@
 *Library CLI application
 
-...
+*execution instructions
 
-*installation instructions
+>>ruby lib.rb
 
-...
+*installation
 
-*application help
-
-...
+ruby 2.4.1 needed

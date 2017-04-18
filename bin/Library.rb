@@ -13,11 +13,11 @@ class Library
 	end
 
 	def readers_orders(reader_name)
-		@orders.select{ |order| order.reader.name == reader_name }
+		@orders.select{ |o| o.reader.name == reader_name }
 	end
 
 	def books_orders(book_title)
-		@orders.select{ |order| order.book.title == book_title }
+		@orders.select{ |o| o.book.title == book_title }
 	end
 
 	def top_reader
