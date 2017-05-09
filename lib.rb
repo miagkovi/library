@@ -3,31 +3,31 @@ require './bin/Book'
 require './bin/Order'
 require './bin/Reader'
 require './bin/Library'
-require './DataFiller'
 
-DATA_PATH = './marshal_data.rb'
+require 'yaml'
 
-sleep(1)
+DATA_PATH = './data.yaml'
 
 puts 'Welcome to Library'
 
-sleep(1)
-
-if File::exist?(DATA_PATH)
+if File.exist?(DATA_PATH)
   puts "Data file is OK. Loading data..."
-  sleep(1)
 else
   puts "No data file! Creating new data file..."
+  File.open(DATA_PATH, "w+")
   puts "Filling data file..."
-  Marshal::dump(data_filler, File::open(DATA_PATH, 'w')) #EOFError
-  sleep(1)
+  to_yaml???
 end
 
-library = Marshal::load(File::open(DATA_PATH))
+data = YAML::load(File.open(DATA_PATH))
 
-puts "Data loaded successfully."
+library = Library.new(data)
 
 puts "Enter help to see all available options"
+
+puts library.class
+puts Book.class
+puts library.orders[0].book.author.name.class
 
 loop do
   input = gets.chomp
@@ -67,6 +67,6 @@ loop do
     puts library.readers
   when /\Aexit\z/i
   	break
-  else puts 'Invalid command (enter help to see all options)'
+  else puts 'Invalid command (help to see all options)'
   end
 end

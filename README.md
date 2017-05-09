@@ -1,11 +1,17 @@
-*Library CLI application
+### Library
 
-...
+Ruby Garage courses task
 
-*installation instructions
+### Execution instructions
 
-...
+For marshal db:
 
-*application help
+###### >>ruby main.rb
 
-...
+For yaml db:
+
+###### >>ruby lib.rb
+
+### Dependencies:
+
+ruby 2.4.1

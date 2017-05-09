@@ -1,8 +1,8 @@
 class Author
 	attr_accessor :name, :biography
-	def initialize(name, biography)
-		@name = name
-		@biography = biography
+	def initialize(options = {})
+		@name = options[:name]
+		@biography = options[:biography]
 	end
 
 	def to_s

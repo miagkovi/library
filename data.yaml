@@ -6,19 +6,19 @@ readers:
   email: jdoe@gmail.com
   city: New York
   street: 1st Street
-  house: 5
+  house: '5'
 - &32 !ruby/object:Reader 
   name: Jane Doe
   email: jane@hotmail.com
   city: New York
   street: 1st Street
-  house: 5
+  house: '5'
 - &33 !ruby/object:Reader 
   name: Jack Jackson
   email: jjackson@gmail.com
   city: New York
   street: 2nd Street
-  house: 8
+  house: '8'
 
 authors:
 - &1 !ruby/object:Author

@@ -9,6 +9,6 @@ class Reader
 	end
 
 	def to_s
-		"#{@name} - #{@email}"
+		"#{@name} | #{@email}"
 	end
 end

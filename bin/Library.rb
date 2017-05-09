@@ -1,23 +1,10 @@
-require_relative 'Author'
-require_relative 'Book'
-require_relative 'Order'
-require_relative 'Reader'
-
 class Library
 	attr_accessor :books, :orders, :readers, :authors
-	def initialize(options = {})
-		@books = options[:books]
-		@orders = options[:orders]
-		@readers = options[:readers]
-		@authors = options[:authors]
-	end
-
-	def readers_orders(reader_name)
-		@orders.select{ |order| order.reader.name == reader_name }
-	end
-
-	def books_orders(book_title)
-		@orders.select{ |order| order.book.title == book_title }
+	def initialize(data = {})
+		@books = data[:books]
+		@orders = data[:orders]
+		@readers = data[:readers]
+		@authors = data[:authors]
 	end
 
 	def top_reader
@@ -50,5 +37,17 @@ class Library
 		books_orders(top_book.title).each{ |o| top_book_readers << o.reader}
 		top_book_readers
 	end
+
+	private
+
+	def readers_orders(reader_name)
+		@orders.select{ |order| order.reader.name == reader_name }
+	end
+
+	def books_orders(book_title)
+		@orders.select{ |order| order.book.title == book_title }
+	end
+
+
 
 end
