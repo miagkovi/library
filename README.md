@@ -1,17 +1,12 @@
 ### Library
 
-Ruby Garage courses task
+Ruby Garage courses OOP task
 
 ### Execution instructions
 
-For marshal db:
-
-###### >>ruby main.rb
-
-For yaml db:
-
-###### >>ruby lib.rb
+>>ruby main.rb
 
 ### Dependencies:
 
 ruby 2.4.1
+rubocop
