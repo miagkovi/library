@@ -1,11 +1,12 @@
-*Library CLI application
+### Library
 
-...
+Ruby Garage courses OOP task
 
-*installation instructions
+### Execution instructions
 
-...
+>>ruby main.rb
 
-*application help
+### Dependencies:
 
-...
+ruby 2.4.1
+rubocop
