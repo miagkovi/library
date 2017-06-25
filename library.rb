@@ -48,7 +48,7 @@ class Library
            .to_h
            .values
            .flatten(1)
-           .collect{|order| order.reader}
+           .collect(&:reader)
            .uniq
            .size
   end
